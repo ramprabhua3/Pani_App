@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಪಾನಿ</string>
+    <string name="app_tagline">ಸ್ಥಳೀಯ ಪ್ರತಿಭೆ ಹುಡುಕಿ. ಇಂದೇ ಕೆಲಸ ಪಡೆಯಿರಿ.</string>
+
+    <!-- Auth -->
+    <string name="auth_enter_phone">ನಿಮ್ಮ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ</string>
+    <string name="auth_phone_hint">10 ಅಂಕಿಯ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ</string>
+    <string name="auth_send_otp">OTP ಕಳುಹಿಸಿ</string>
+    <string name="auth_enter_otp">OTP ನಮೂದಿಸಿ</string>
+    <string name="auth_otp_hint">6 ಅಂಕಿಯ ಕೋಡ್</string>
+    <string name="auth_verify">ಪರಿಶೀಲಿಸಿ</string>
+    <string name="auth_resend_otp">OTP ಮತ್ತೆ ಕಳುಹಿಸಿ</string>
+    <string name="auth_resend_in">%1$d ಸೆಕೆಂಡ್‌ಗಳಲ್ಲಿ ಮತ್ತೆ ಕಳುಹಿಸಿ</string>
+    <string name="auth_invalid_phone">ದಯವಿಟ್ಟು ಸರಿಯಾದ 10 ಅಂಕಿಯ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ</string>
+    <string name="auth_invalid_otp">ತಪ್ಪು OTP. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_select_language">ಭಾಷೆ ಆಯ್ಕೆ ಮಾಡಿ</string>
+    <string name="onboarding_select_mode">ನಾನು…</string>
+    <string name="onboarding_mode_worker">ಕಾರ್ಮಿಕ</string>
+    <string name="onboarding_mode_employer">ಮಾಲೀಕ / ಗುತ್ತಿಗೆದಾರ</string>
+    <string name="onboarding_select_trade">ನಿಮ್ಮ ಕೆಲಸ ಏನು?</string>
+    <string name="onboarding_continue">ಮುಂದುವರಿಸಿ</string>
+
+    <!-- Trade Categories -->
+    <string name="trade_mechanic">ಮೆಕ್ಯಾನಿಕ್</string>
+    <string name="trade_driver">ಚಾಲಕ</string>
+    <string name="trade_retail">ಅಂಗಡಿ ಸಿಬ್ಬಂದಿ</string>
+    <string name="trade_warehouse">ಗೋದಾಮು</string>
+    <string name="trade_electrician">ವಿದ್ಯುತ್ ತಜ್ಞ</string>
+    <string name="trade_plumber">ಪ್ಲಂಬರ್</string>
+    <string name="trade_carpenter">ಬಡಗಿ</string>
+    <string name="trade_delivery">ಡೆಲಿವರಿ</string>
+    <string name="trade_security">ಭದ್ರತಾ ಸಿಬ್ಬಂದಿ</string>
+    <string name="trade_housekeeping">ಗೃಹ ನಿರ್ವಹಣೆ</string>
+
+    <!-- Worker — Video Capture -->
+    <string name="capture_title">ನಿಮ್ಮ ಕೌಶಲ್ಯ ತೋರಿಸಿ</string>
+    <string name="capture_subtitle">30 ಸೆಕೆಂಡ್‌ಗಳಲ್ಲಿ ನಿಮ್ಮ ಕೆಲಸ ತೋರಿಸಿ</string>
+    <string name="capture_tap_to_start">ರೆಕಾರ್ಡ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
+    <string name="capture_recording">ರೆಕಾರ್ಡಿಂಗ್… %1$d ಸೆಕೆಂಡ್ ಬಾಕಿ</string>
+    <string name="capture_retake">ಮತ್ತೆ ತೆಗೆಯಿರಿ</string>
+    <string name="capture_use_video">ಈ ವೀಡಿಯೊ ಬಳಸಿ</string>
+    <string name="capture_uploading">ವೀಡಿಯೊ ಅಪ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
+    <string name="capture_upload_success">ವೀಡಿಯೊ ಅಪ್‌ಲೋಡ್ ಆಯಿತು!</string>
+    <string name="capture_upload_error">ಅಪ್‌ಲೋಡ್ ವಿಫಲ. ನೆಟ್‌ವರ್ಕ್ ಬಂದಾಗ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲಾಗುವುದು.</string>
+
+    <!-- Employer — Feed -->
+    <string name="feed_title">ಹತ್ತಿರದ ಕಾರ್ಮಿಕರು</string>
+    <string name="feed_empty">ಹತ್ತಿರದಲ್ಲಿ ಯಾರೂ ಕಂಡುಬಂದಿಲ್ಲ. ಬೇರೆ ಕೆಲಸ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="feed_filter">ಫಿಲ್ಟರ್</string>
+    <string name="feed_km_away">%1$.1f ಕಿ.ಮೀ ದೂರ</string>
+    <string name="feed_available_now">ಈಗ ಲಭ್ಯ</string>
+    <string name="feed_verified">ಪರಿಶೀಲಿಸಲಾಗಿದೆ</string>
+
+    <!-- Contact -->
+    <string name="contact_call">ಕರೆ ಮಾಡಿ</string>
+    <string name="contact_message">ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
+    <string name="contact_request_sent">ಸಂಪರ್ಕ ವಿನಂತಿ ಕಳುಹಿಸಲಾಗಿದೆ!</string>
+    <string name="contact_chat_hint">ಸಂದೇಶ ಟೈಪ್ ಮಾಡಿ…</string>
+    <string name="contact_send">ಕಳುಹಿಸಿ</string>
+
+    <!-- Common -->
+    <string name="common_loading">ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
+    <string name="common_error_generic">ಏನೋ ತಪ್ಪಾಗಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="common_no_internet">ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಇಲ್ಲ</string>
+    <string name="common_offline_mode">ಆಫ್‌ಲೈನ್ ಮೋಡ್ — ಕ್ಯಾಶ್ ಡೇಟಾ ತೋರಿಸಲಾಗುತ್ತಿದೆ</string>
+    <string name="common_retry">ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</string>
+    <string name="common_ok">ಸರಿ</string>
+    <string name="common_cancel">ರದ್ದು ಮಾಡಿ</string>
+    <string name="common_back">ಹಿಂದೆ</string>
+</resources>

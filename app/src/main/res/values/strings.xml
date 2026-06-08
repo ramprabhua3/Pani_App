@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pani</string>
+    <string name="app_tagline">Find local talent. Get hired today.</string>
+
+    <!-- Auth -->
+    <string name="auth_enter_phone">Enter your mobile number</string>
+    <string name="auth_phone_hint">10-digit mobile number</string>
+    <string name="auth_send_otp">Send OTP</string>
+    <string name="auth_enter_otp">Enter OTP</string>
+    <string name="auth_otp_hint">6-digit code</string>
+    <string name="auth_verify">Verify</string>
+    <string name="auth_resend_otp">Resend OTP</string>
+    <string name="auth_resend_in">Resend in %1$ds</string>
+    <string name="auth_invalid_phone">Please enter a valid 10-digit number</string>
+    <string name="auth_invalid_otp">Invalid OTP. Please try again.</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_select_language">Select your language</string>
+    <string name="onboarding_select_mode">I am a…</string>
+    <string name="onboarding_mode_worker">Worker</string>
+    <string name="onboarding_mode_employer">Employer / Contractor</string>
+    <string name="onboarding_select_trade">What is your work?</string>
+    <string name="onboarding_continue">Continue</string>
+
+    <!-- Trade Categories -->
+    <string name="trade_mechanic">Mechanic</string>
+    <string name="trade_driver">Driver</string>
+    <string name="trade_retail">Retail Staff</string>
+    <string name="trade_warehouse">Warehouse</string>
+    <string name="trade_electrician">Electrician</string>
+    <string name="trade_plumber">Plumber</string>
+    <string name="trade_carpenter">Carpenter</string>
+    <string name="trade_delivery">Delivery</string>
+    <string name="trade_security">Security Guard</string>
+    <string name="trade_housekeeping">Housekeeping</string>
+
+    <!-- Worker — Video Capture (Hunar) -->
+    <string name="capture_title">Record your Hunar</string>
+    <string name="capture_subtitle">Show your skill in 30 seconds</string>
+    <string name="capture_tap_to_start">Tap to start recording</string>
+    <string name="capture_recording">Recording… %1$ds left</string>
+    <string name="capture_retake">Retake</string>
+    <string name="capture_use_video">Use this video</string>
+    <string name="capture_uploading">Uploading your video…</string>
+    <string name="capture_upload_success">Video uploaded!</string>
+    <string name="capture_upload_error">Upload failed. Will retry when online.</string>
+
+    <!-- Worker — Profile -->
+    <string name="profile_title">My Profile</string>
+    <string name="profile_availability">Available for work</string>
+    <string name="profile_not_available">Not available right now</string>
+    <string name="profile_edit">Edit profile</string>
+    <string name="profile_name_hint">Your full name</string>
+    <string name="profile_save">Save</string>
+
+    <!-- Employer — Feed -->
+    <string name="feed_title">Nearby Workers</string>
+    <string name="feed_empty">No workers found nearby. Try a different trade or area.</string>
+    <string name="feed_filter">Filter</string>
+    <string name="feed_km_away">%1$.1f km away</string>
+    <string name="feed_available_now">Available now</string>
+    <string name="feed_verified">Verified</string>
+
+    <!-- Employer — Search / Filter -->
+    <string name="search_trade_label">Trade</string>
+    <string name="search_radius_label">Distance</string>
+    <string name="search_radius_5km">5 km</string>
+    <string name="search_radius_10km">10 km</string>
+    <string name="search_radius_15km">15 km</string>
+    <string name="search_apply">Apply Filters</string>
+    <string name="search_reset">Reset</string>
+
+    <!-- Contact -->
+    <string name="contact_call">Call</string>
+    <string name="contact_message">Message</string>
+    <string name="contact_request_sent">Contact request sent!</string>
+    <string name="contact_chat_hint">Type a message…</string>
+    <string name="contact_send">Send</string>
+
+    <!-- Common -->
+    <string name="common_loading">Loading…</string>
+    <string name="common_error_generic">Something went wrong. Please try again.</string>
+    <string name="common_no_internet">No internet connection</string>
+    <string name="common_offline_mode">Offline mode — showing cached data</string>
+    <string name="common_retry">Retry</string>
+    <string name="common_ok">OK</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_back">Back</string>
+
+    <!-- Accessibility -->
+    <string name="a11y_play_video">Play %1$s\'s video</string>
+    <string name="a11y_worker_thumbnail">Photo of %1$s</string>
+    <string name="a11y_call_worker">Call %1$s</string>
+    <string name="a11y_message_worker">Message %1$s</string>
+</resources>

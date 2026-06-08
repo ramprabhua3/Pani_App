@@ -1,0 +1,34 @@
+### Android build outputs ###
+*.apk
+*.aab
+*.dex
+*.class
+bin/
+gen/
+build/
+out/
+.gradle/
+.idea/
+*.iml
+.DS_Store
+
+### Sensitive config — NEVER commit these ###
+local.properties
+secrets.properties
+google-services.json
+*.jks
+*.keystore
+*.p12
+
+### Gradle wrapper (keep wrapper jar, ignore caches) ###
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+.gradle
+
+### Room schema exports (commit these for migration auditing) ###
+!app/schemas/
+
+### OS ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini

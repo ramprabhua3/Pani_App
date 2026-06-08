@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">पानी</string>
+    <string name="app_tagline">स्थानीय प्रतिभा खोजें। आज नौकरी पाएं।</string>
+
+    <!-- Auth -->
+    <string name="auth_enter_phone">अपना मोबाइल नंबर दर्ज करें</string>
+    <string name="auth_phone_hint">10 अंकों का मोबाइल नंबर</string>
+    <string name="auth_send_otp">OTP भेजें</string>
+    <string name="auth_enter_otp">OTP दर्ज करें</string>
+    <string name="auth_otp_hint">6 अंकों का कोड</string>
+    <string name="auth_verify">सत्यापित करें</string>
+    <string name="auth_resend_otp">OTP फिर से भेजें</string>
+    <string name="auth_resend_in">%1$d सेकंड में फिर भेजें</string>
+    <string name="auth_invalid_phone">कृपया सही 10 अंकों का नंबर दर्ज करें</string>
+    <string name="auth_invalid_otp">गलत OTP। कृपया पुनः प्रयास करें।</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_select_language">भाषा चुनें</string>
+    <string name="onboarding_select_mode">मैं हूँ…</string>
+    <string name="onboarding_mode_worker">कामगार</string>
+    <string name="onboarding_mode_employer">नियोक्ता / ठेकेदार</string>
+    <string name="onboarding_select_trade">आपका काम क्या है?</string>
+    <string name="onboarding_continue">आगे बढ़ें</string>
+
+    <!-- Trade Categories -->
+    <string name="trade_mechanic">मैकेनिक</string>
+    <string name="trade_driver">ड्राइवर</string>
+    <string name="trade_retail">दुकान स्टाफ</string>
+    <string name="trade_warehouse">गोदाम</string>
+    <string name="trade_electrician">बिजली मिस्त्री</string>
+    <string name="trade_plumber">प्लंबर</string>
+    <string name="trade_carpenter">बढ़ई</string>
+    <string name="trade_delivery">डिलीवरी</string>
+    <string name="trade_security">सुरक्षा गार्ड</string>
+    <string name="trade_housekeeping">सफाई कर्मचारी</string>
+
+    <!-- Worker — Video Capture -->
+    <string name="capture_title">अपना हुनर दिखाएं</string>
+    <string name="capture_subtitle">30 सेकंड में अपना काम दिखाएं</string>
+    <string name="capture_tap_to_start">रिकॉर्ड करने के लिए टैप करें</string>
+    <string name="capture_recording">रिकॉर्ड हो रहा है… %1$d सेकंड बाकी</string>
+    <string name="capture_retake">फिर से लें</string>
+    <string name="capture_use_video">यह वीडियो उपयोग करें</string>
+    <string name="capture_uploading">वीडियो अपलोड हो रहा है…</string>
+    <string name="capture_upload_success">वीडियो अपलोड हो गया!</string>
+    <string name="capture_upload_error">अपलोड विफल। इंटरनेट आने पर फिर कोशिश होगी।</string>
+
+    <!-- Worker — Profile -->
+    <string name="profile_title">मेरी प्रोफाइल</string>
+    <string name="profile_availability">काम के लिए उपलब्ध</string>
+    <string name="profile_not_available">अभी उपलब्ध नहीं</string>
+    <string name="profile_edit">प्रोफाइल बदलें</string>
+    <string name="profile_name_hint">आपका पूरा नाम</string>
+    <string name="profile_save">सहेजें</string>
+
+    <!-- Employer — Feed -->
+    <string name="feed_title">पास के कामगार</string>
+    <string name="feed_empty">पास में कोई कामगार नहीं मिला। अलग काम या क्षेत्र आज़माएं।</string>
+    <string name="feed_filter">फ़िल्टर</string>
+    <string name="feed_km_away">%1$.1f km दूर</string>
+    <string name="feed_available_now">अभी उपलब्ध</string>
+    <string name="feed_verified">सत्यापित</string>
+
+    <!-- Employer — Search -->
+    <string name="search_trade_label">काम</string>
+    <string name="search_radius_label">दूरी</string>
+    <string name="search_radius_5km">5 km</string>
+    <string name="search_radius_10km">10 km</string>
+    <string name="search_radius_15km">15 km</string>
+    <string name="search_apply">फ़िल्टर लागू करें</string>
+    <string name="search_reset">रीसेट</string>
+
+    <!-- Contact -->
+    <string name="contact_call">कॉल करें</string>
+    <string name="contact_message">संदेश भेजें</string>
+    <string name="contact_request_sent">संपर्क अनुरोध भेजा गया!</string>
+    <string name="contact_chat_hint">संदेश लिखें…</string>
+    <string name="contact_send">भेजें</string>
+
+    <!-- Common -->
+    <string name="common_loading">लोड हो रहा है…</string>
+    <string name="common_error_generic">कुछ गलत हो गया। कृपया पुनः प्रयास करें।</string>
+    <string name="common_no_internet">इंटरनेट कनेक्शन नहीं है</string>
+    <string name="common_offline_mode">ऑफलाइन मोड — कैश डेटा दिखाया जा रहा है</string>
+    <string name="common_retry">पुनः प्रयास करें</string>
+    <string name="common_ok">ठीक है</string>
+    <string name="common_cancel">रद्द करें</string>
+    <string name="common_back">वापस</string>
+</resources>

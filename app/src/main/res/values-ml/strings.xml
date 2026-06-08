@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">പാനി</string>
+    <string name="app_tagline">പ്രാദേശിക കഴിവ് കണ്ടെത്തൂ. ഇന്നുതന്നെ ജോലി നേടൂ.</string>
+
+    <!-- Auth -->
+    <string name="auth_enter_phone">നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകൂ</string>
+    <string name="auth_phone_hint">10 അക്ക മൊബൈൽ നമ്പർ</string>
+    <string name="auth_send_otp">OTP അയക്കൂ</string>
+    <string name="auth_enter_otp">OTP നൽകൂ</string>
+    <string name="auth_otp_hint">6 അക്ക കോഡ്</string>
+    <string name="auth_verify">സ്ഥിരീകരിക്കൂ</string>
+    <string name="auth_resend_otp">OTP വീണ്ടും അയക്കൂ</string>
+    <string name="auth_resend_in">%1$d സെക്കൻഡിൽ വീണ്ടും അയക്കൂ</string>
+    <string name="auth_invalid_phone">ദയവായി ശരിയായ 10 അക്ക നമ്പർ നൽകൂ</string>
+    <string name="auth_invalid_otp">തെറ്റായ OTP. വീണ്ടും ശ്രമിക്കൂ.</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_select_language">ഭാഷ തിരഞ്ഞെടുക്കൂ</string>
+    <string name="onboarding_select_mode">ഞാൻ…</string>
+    <string name="onboarding_mode_worker">തൊഴിലാളി</string>
+    <string name="onboarding_mode_employer">തൊഴിലുടമ / കരാറുകാർ</string>
+    <string name="onboarding_select_trade">നിങ്ങളുടെ ജോലി എന്താണ്?</string>
+    <string name="onboarding_continue">തുടരൂ</string>
+
+    <!-- Trade Categories -->
+    <string name="trade_mechanic">മെക്കാനിക്</string>
+    <string name="trade_driver">ഡ്രൈവർ</string>
+    <string name="trade_retail">കട ജീവനക്കാർ</string>
+    <string name="trade_warehouse">ഗോഡൗൺ</string>
+    <string name="trade_electrician">ഇലക്ട്രീഷ്യൻ</string>
+    <string name="trade_plumber">പ്ലംബർ</string>
+    <string name="trade_carpenter">ആശാരി</string>
+    <string name="trade_delivery">ഡെലിവറി</string>
+    <string name="trade_security">സുരക്ഷാ ഗാർഡ്</string>
+    <string name="trade_housekeeping">ഗൃഹ പരിചരണം</string>
+
+    <!-- Worker — Video Capture -->
+    <string name="capture_title">നിങ്ങളുടെ കഴിവ് കാണിക്കൂ</string>
+    <string name="capture_subtitle">30 സെക്കൻഡിൽ നിങ്ങളുടെ ജോലി കാണിക്കൂ</string>
+    <string name="capture_tap_to_start">റെക്കോർഡ് ചെയ്യാൻ ടാപ്പ് ചെയ്യൂ</string>
+    <string name="capture_recording">റെക്കോർഡിംഗ്… %1$d സെക്കൻഡ് ബാക്കി</string>
+    <string name="capture_retake">വീണ്ടും എടുക്കൂ</string>
+    <string name="capture_use_video">ഈ വീഡിയോ ഉപയോഗിക്കൂ</string>
+    <string name="capture_uploading">വീഡിയോ അപ്‌ലോഡ് ആകുന്നു…</string>
+    <string name="capture_upload_success">വീഡിയോ അപ്‌ലോഡ് ആയി!</string>
+    <string name="capture_upload_error">അപ്‌ലോഡ് പരാജയപ്പെട്ടു. നെറ്റ്‌വർക്ക് ലഭ്യമാകുമ്പോൾ വീണ്ടും ശ്രമിക്കും.</string>
+
+    <!-- Employer — Feed -->
+    <string name="feed_title">അടുത്തുള്ള തൊഴിലാളികൾ</string>
+    <string name="feed_empty">അടുത്ത് ആരും കണ്ടെത്തിയില്ല. മറ്റൊരു ജോലി ശ്രമിക്കൂ.</string>
+    <string name="feed_filter">ഫിൽട്ടർ</string>
+    <string name="feed_km_away">%1$.1f കി.മീ അകലം</string>
+    <string name="feed_available_now">ഇപ്പോൾ ലഭ്യം</string>
+    <string name="feed_verified">സ്ഥിരീകരിച്ചു</string>
+
+    <!-- Contact -->
+    <string name="contact_call">വിളിക്കൂ</string>
+    <string name="contact_message">സന്ദേശം അയക്കൂ</string>
+    <string name="contact_request_sent">ബന്ധപ്പെടൽ അഭ്യർത്ഥന അയച്ചു!</string>
+    <string name="contact_chat_hint">സന്ദേശം ടൈപ്പ് ചെയ്യൂ…</string>
+    <string name="contact_send">അയക്കൂ</string>
+
+    <!-- Common -->
+    <string name="common_loading">ലോഡ് ആകുന്നു…</string>
+    <string name="common_error_generic">എന്തോ തകരാർ സംഭവിച്ചു. വീണ്ടും ശ്രമിക്കൂ.</string>
+    <string name="common_no_internet">ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ല</string>
+    <string name="common_offline_mode">ഓഫ്‌ലൈൻ മോഡ് — കാഷ്ഡ് ഡേറ്റ കാണിക്കുന്നു</string>
+    <string name="common_retry">വീണ്ടും ശ്രമിക്കൂ</string>
+    <string name="common_ok">ശരി</string>
+    <string name="common_cancel">റദ്ദാക്കൂ</string>
+    <string name="common_back">തിരിച്ചു</string>
+</resources>
