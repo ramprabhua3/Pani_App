@@ -78,7 +78,7 @@ class JobRepositoryImpl @Inject constructor(
     override suspend fun syncPendingContactRequests() {
         contactRequestDao.getPendingUpload().forEach { entity ->
             try {
-                api.sendContactRequest(entity.toDto())
+                api.sendContactRequest(entity.toDomain().toDto())
                 contactRequestDao.updateSyncStatus(entity.id, ContactRequestEntity.SyncStatus.SYNCED)
             } catch (_: Exception) {
                 // Leave as PENDING_UPLOAD — WorkManager will retry
