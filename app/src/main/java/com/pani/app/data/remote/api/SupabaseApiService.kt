@@ -128,10 +128,9 @@ class SupabaseApiService @Inject constructor(
     ): String = withContext(Dispatchers.IO) {
         val objectPath = "hunar/$workerId/${videoFile.name}"
         client.storage["worker-videos"].upload(
-            path   = objectPath,
-            data   = videoFile.readBytes(),
-            upsert = true
-        )
+            path = objectPath,
+            data = videoFile.readBytes()
+        ) { upsert = true }
         client.storage["worker-videos"].publicUrl(objectPath)
     }
 
@@ -145,10 +144,9 @@ class SupabaseApiService @Inject constructor(
     ): String = withContext(Dispatchers.IO) {
         val objectPath = "thumbnails/$workerId/${thumbnailFile.name}"
         client.storage["worker-videos"].upload(
-            path   = objectPath,
-            data   = thumbnailFile.readBytes(),
-            upsert = true
-        )
+            path = objectPath,
+            data = thumbnailFile.readBytes()
+        ) { upsert = true }
         client.storage["worker-videos"].publicUrl(objectPath)
     }
 }
