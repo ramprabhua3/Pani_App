@@ -5,21 +5,22 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.pani.app.domain.model.UserMode
+import com.pani.app.presentation.auth.AuthScreen
 import com.pani.app.presentation.employer.feed.EmployerFeedScreen
+import com.pani.app.presentation.onboarding.OnboardingScreen
 import com.pani.app.presentation.worker.capture.WorkerCaptureScreen
 
 /**
- * Pani navigation graph.
+ * Pani navigation graph — full auth flow wired in Phase A.
  *
- * Active routes:
- *   employer_feed  ← Phase 3-C
- *   worker_capture ← Phase B
+ * Route order:
+ *   AUTH  →  ONBOARDING (new user)  →  EMPLOYER_FEED  or  WORKER_CAPTURE
+ *         →  EMPLOYER_FEED / WORKER_CAPTURE (returning user, direct via session check)
  *
- * Placeholder routes (not yet implemented):
- *   auth           ← Phase A: Firebase OTP screen
- *   onboarding     ← Phase A: language + mode selection
- *   worker_profile ← Phase B: worker's own profile
- *   contact_chat   ← Phase 3: in-app messaging
+ * Routes not yet implemented:
+ *   WORKER_PROFILE  ← Phase A+: worker's own profile page
+ *   CONTACT_CHAT    ← Phase 3:  in-app messaging
  */
 object PaniRoute {
     const val AUTH            = "auth"
@@ -35,39 +36,66 @@ object PaniRoute {
 @Composable
 fun PaniNavGraph(
     navController: NavHostController = rememberNavController(),
-    // Start directly on the feed during development; switch to AUTH after Phase A
-    startDestination: String = PaniRoute.EMPLOYER_FEED
+    startDestination: String = PaniRoute.AUTH
 ) {
     NavHost(
         navController    = navController,
         startDestination = startDestination
     ) {
+
+        // ── Auth (phone OTP) ─────────────────────────────────────────────────
+        composable(PaniRoute.AUTH) {
+            AuthScreen(
+                onNewUser = {
+                    navController.navigate(PaniRoute.ONBOARDING) {
+                        popUpTo(PaniRoute.AUTH) { inclusive = true }
+                    }
+                },
+                onReturningUser = { mode ->
+                    val dest = if (mode == UserMode.WORKER) PaniRoute.WORKER_CAPTURE
+                               else PaniRoute.EMPLOYER_FEED
+                    navController.navigate(dest) {
+                        popUpTo(PaniRoute.AUTH) { inclusive = true }
+                    }
+                }
+            )
+        }
+
+        // ── Onboarding (language + mode) ─────────────────────────────────────
+        composable(PaniRoute.ONBOARDING) {
+            OnboardingScreen(
+                onComplete = { mode ->
+                    val dest = if (mode == UserMode.WORKER) PaniRoute.WORKER_CAPTURE
+                               else PaniRoute.EMPLOYER_FEED
+                    navController.navigate(dest) {
+                        popUpTo(PaniRoute.ONBOARDING) { inclusive = true }
+                    }
+                }
+            )
+        }
+
+        // ── Employer: vertical video feed ────────────────────────────────────
         composable(PaniRoute.EMPLOYER_FEED) {
             EmployerFeedScreen(
-                onCallWorker    = { worker ->
-                    // Direct dial via intent — masked number routing in Phase 3
-                    // navController.navigate(...)
-                },
+                onCallWorker    = { /* direct dial — phone masking in Phase 3 */ },
                 onMessageWorker = { worker ->
                     navController.navigate(PaniRoute.contactChat(worker.id))
                 }
             )
         }
 
+        // ── Worker: Hunar video capture ──────────────────────────────────────
         composable(PaniRoute.WORKER_CAPTURE) {
             WorkerCaptureScreen(
                 onUploadComplete = {
-                    // After upload, pop back to wherever the worker came from.
-                    // Phase A will replace this with navigation to the worker's profile.
+                    // Will navigate to WORKER_PROFILE once that screen is built.
                     navController.popBackStack()
                 }
             )
         }
 
         // Stubs — screens added in subsequent phases
-        composable(PaniRoute.AUTH) { /* AuthScreen() */ }
-        composable(PaniRoute.ONBOARDING) { /* OnboardingScreen() */ }
         composable(PaniRoute.WORKER_PROFILE) { /* WorkerProfileScreen() */ }
-        composable(PaniRoute.CONTACT_CHAT) { /* ContactChatScreen() */ }
+        composable(PaniRoute.CONTACT_CHAT)   { /* ContactChatScreen() */ }
     }
 }

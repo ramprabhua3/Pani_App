@@ -111,6 +111,8 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.activity.compose)
     implementation(libs.coroutines.android)
+    implementation(libs.coroutines.play.services)
+    implementation(libs.appcompat)
 
     // Compose (BOM-managed — no explicit versions needed below)
     implementation(platform(libs.compose.bom))

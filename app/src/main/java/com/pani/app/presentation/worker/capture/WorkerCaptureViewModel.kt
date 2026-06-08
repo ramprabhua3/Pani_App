@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
+import com.pani.app.data.local.preferences.PaniPreferences
 import com.pani.app.data.worker.HunarUploadWorker
 import com.pani.app.util.constants.AppConstants
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,17 +14,24 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class WorkerCaptureViewModel @Inject constructor(
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    preferences: PaniPreferences
 ) : ViewModel() {
+
+    /** The authenticated user's ID from DataStore — used as the Supabase storage path. */
+    val userId: StateFlow<String?> = preferences.userId
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
     private val _uiState = MutableStateFlow(WorkerCaptureUiState())
     val uiState: StateFlow<WorkerCaptureUiState> = _uiState.asStateFlow()
@@ -86,11 +94,9 @@ class WorkerCaptureViewModel @Inject constructor(
 
     // ── Upload ────────────────────────────────────────────────────────────────
 
-    /**
-     * Enqueues the upload WorkRequest and observes its progress / result.
-     * [workerId] is the authenticated Supabase user ID.
-     */
-    fun onUseVideo(workerId: String) {
+    /** Enqueues the upload WorkRequest and observes its progress / result. */
+    fun onUseVideo() {
+        val workerId  = userId.value ?: return
         val videoPath = _uiState.value.recordedVideoPath ?: return
         _uiState.update { it.copy(captureState = CaptureState.UPLOADING, uploadProgress = 0f) }
 

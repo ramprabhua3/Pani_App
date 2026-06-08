@@ -65,9 +65,6 @@ import com.pani.app.R
 import com.pani.app.util.constants.AppConstants
 import java.io.File
 
-// Hardcoded placeholder — replaced with actual auth session in Phase A
-private const val DEV_WORKER_ID = "dev-worker-placeholder"
-
 @Composable
 fun WorkerCaptureScreen(
     onUploadComplete: () -> Unit,
@@ -242,9 +239,9 @@ fun WorkerCaptureScreen(
             // ── REVIEW ────────────────────────────────────────────────────────
             CaptureState.REVIEW -> {
                 VideoReviewContent(
-                    videoPath    = uiState.recordedVideoPath ?: "",
-                    onRetake     = viewModel::onRetake,
-                    onUseVideo   = { viewModel.onUseVideo(DEV_WORKER_ID) }
+                    videoPath  = uiState.recordedVideoPath ?: "",
+                    onRetake   = viewModel::onRetake,
+                    onUseVideo = viewModel::onUseVideo
                 )
             }
 

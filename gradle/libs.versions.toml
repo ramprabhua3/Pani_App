@@ -52,6 +52,9 @@ navigationCompose = "2.8.2"
 # Coroutines
 coroutines = "1.8.1"
 
+# AppCompat (for AppCompatDelegate.setApplicationLocales)
+appcompat = "1.7.0"
+
 # Serialization
 kotlinxSerialization = "1.7.3"
 
@@ -136,6 +139,10 @@ hilt-workmanager-compiler = { group = "androidx.hilt", name = "hilt-compiler", v
 
 # Coroutines
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "coroutines" }
+
+# AppCompat
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 # Serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
