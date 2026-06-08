@@ -55,6 +55,9 @@ coroutines = "1.8.1"
 # Serialization
 kotlinxSerialization = "1.7.3"
 
+# Google Play Services
+playServicesLocation = "21.3.0"
+
 # Testing
 junit = "4.13.2"
 junitExt = "1.2.1"
@@ -136,6 +139,9 @@ coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutin
 
 # Serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
+# Google Play Services
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 
 # Testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }

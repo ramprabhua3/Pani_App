@@ -6,17 +6,18 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.pani.app.presentation.employer.feed.EmployerFeedScreen
+import com.pani.app.presentation.worker.capture.WorkerCaptureScreen
 
 /**
  * Pani navigation graph.
  *
- * Current routes (Phase 3-C — Employer feed):
- *   employer_feed  ← active
+ * Active routes:
+ *   employer_feed  ← Phase 3-C
+ *   worker_capture ← Phase B
  *
- * Placeholder routes wired but not implemented yet:
+ * Placeholder routes (not yet implemented):
  *   auth           ← Phase A: Firebase OTP screen
  *   onboarding     ← Phase A: language + mode selection
- *   worker_capture ← Phase B: CameraX 30s recording
  *   worker_profile ← Phase B: worker's own profile
  *   contact_chat   ← Phase 3: in-app messaging
  */
@@ -53,10 +54,19 @@ fun PaniNavGraph(
             )
         }
 
+        composable(PaniRoute.WORKER_CAPTURE) {
+            WorkerCaptureScreen(
+                onUploadComplete = {
+                    // After upload, pop back to wherever the worker came from.
+                    // Phase A will replace this with navigation to the worker's profile.
+                    navController.popBackStack()
+                }
+            )
+        }
+
         // Stubs — screens added in subsequent phases
         composable(PaniRoute.AUTH) { /* AuthScreen() */ }
         composable(PaniRoute.ONBOARDING) { /* OnboardingScreen() */ }
-        composable(PaniRoute.WORKER_CAPTURE) { /* WorkerCaptureScreen() */ }
         composable(PaniRoute.WORKER_PROFILE) { /* WorkerProfileScreen() */ }
         composable(PaniRoute.CONTACT_CHAT) { /* ContactChatScreen() */ }
     }
