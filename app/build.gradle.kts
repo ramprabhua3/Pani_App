@@ -1,5 +1,10 @@
 import java.util.Properties
 
+// Redirect build outputs to the user's home directory (~\pani-build\app) so
+// they land outside OneDrive. OneDrive locks intermediates it is about to sync,
+// causing "Unable to delete directory" failures when Gradle tries to clean them.
+layout.buildDirectory.set(File(System.getProperty("user.home"), "pani-build/app"))
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
