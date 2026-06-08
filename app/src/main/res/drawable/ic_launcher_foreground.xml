@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- White "P" lettermark centred in the safe zone (72dp inner, offset 18dp) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,28 L38,80 L48,80 L48,62 L62,62 C72,62 78,55 78,45 C78,35 72,28 62,28 Z
+                          M48,38 L60,38 C66,38 68,41 68,45 C68,49 66,52 60,52 L48,52 Z" />
+</vector>
