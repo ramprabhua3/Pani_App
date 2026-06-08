@@ -4,8 +4,8 @@ minSdk = "24"
 targetSdk = "36"
 compileSdk = "36"
 agp = "8.13.2"
-kotlin = "2.0.21"
-ksp = "2.0.21-1.0.27"
+kotlin = "2.3.21"
+ksp = "2.3.9"
 
 # Core
 coreKtx = "1.13.1"
@@ -56,7 +56,7 @@ coroutines = "1.8.1"
 appcompat = "1.7.0"
 
 # Serialization
-kotlinxSerialization = "1.7.3"
+kotlinxSerialization = "1.8.1"
 
 # Google Play Services
 playServicesLocation = "21.3.0"
