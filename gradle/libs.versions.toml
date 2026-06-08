@@ -20,7 +20,7 @@ hilt = "2.56.2"
 hiltNavigationCompose = "1.2.0"
 
 # Room
-room = "2.6.1"
+room = "2.7.2"
 
 # Media
 media3 = "1.4.1"
