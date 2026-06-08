@@ -45,7 +45,7 @@ data class WorkerProfileDto(
     @SerialName("name")           val name: String,
     @SerialName("phone_hash")     val phoneHash: String,
     @SerialName("trade_category") val tradeCategory: String,
-    @SerialName("trade_tags")     val tradeTags: String = "[]",
+    @SerialName("trade_tags")     val tradeTags: List<String> = emptyList(),
     @SerialName("video_url")      val videoUrl: String? = null,
     @SerialName("thumbnail_url")  val thumbnailUrl: String? = null,
     @SerialName("latitude")       val latitude: Double,

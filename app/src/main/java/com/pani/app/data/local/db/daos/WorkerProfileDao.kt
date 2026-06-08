@@ -34,6 +34,21 @@ interface WorkerProfileDao {
         maxLon: Double
     ): Flow<List<WorkerProfileEntity>>
 
+    // No-trade-filter variant used when employer browses all trades in a radius
+    @Query("""
+        SELECT * FROM worker_profiles
+        WHERE is_available = 1
+          AND latitude BETWEEN :minLat AND :maxLat
+          AND longitude BETWEEN :minLon AND :maxLon
+        ORDER BY distance_km ASC
+    """)
+    fun getAllWorkersByBounds(
+        minLat: Double,
+        maxLat: Double,
+        minLon: Double,
+        maxLon: Double
+    ): Flow<List<WorkerProfileEntity>>
+
     @Query("SELECT * FROM worker_profiles WHERE id = :id")
     fun getWorkerById(id: String): Flow<WorkerProfileEntity?>
 
@@ -49,6 +64,9 @@ interface WorkerProfileDao {
 
     @Query("UPDATE worker_profiles SET sync_status = :status WHERE id = :id")
     suspend fun updateSyncStatus(id: String, status: String)
+
+    @Query("UPDATE worker_profiles SET is_available = :isAvailable, sync_status = :syncStatus WHERE id = :id")
+    suspend fun updateAvailabilityLocal(id: String, isAvailable: Boolean, syncStatus: String)
 
     @Query("DELETE FROM worker_profiles")
     suspend fun clearAll()
